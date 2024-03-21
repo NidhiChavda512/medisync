@@ -58,7 +58,7 @@
 						<div class="col-md-6">
 							<div class="card paint-card">
 								<div class="card-body">
-									<p class="fs-5">User-friendly Interface</p>
+									<p class="fs-5">User-friendly and Interactive Interface</p>
 									<p>Intuitive design and navigation for easy use by medical
 										staff and administrators.</p>
 								</div>
