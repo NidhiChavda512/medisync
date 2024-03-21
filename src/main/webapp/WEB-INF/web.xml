@@ -1,0 +1,77 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddPatientServlet</servlet-name>
+  	<display-name>AddPatientServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.patient.AddPatientServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewPatientServlet</servlet-name>
+  	<display-name>ViewPatientServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.patient.ViewPatientServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeletePatientServlet</servlet-name>
+  	<display-name>DeletePatientServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.patient.DeletePatientServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditPatientServlet</servlet-name>
+  	<display-name>EditPatientServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.patient.EditPatientServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PatchPatientServlet</servlet-name>
+  	<display-name>PatchPatientServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.patient.PatchPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddPatientServlet</servlet-name>
+  	<url-pattern>/AddPatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewPatientServlet</servlet-name>
+  	<url-pattern>/ViewPatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeletePatientServlet</servlet-name>
+  	<url-pattern>/DeletePatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditPatientServlet</servlet-name>
+  	<url-pattern>/EditPatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PatchPatientServlet</servlet-name>
+  	<url-pattern>/PatchPatientServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
