@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class DBConnection {
 	private static DBConnection dbConnection;
 	private final String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private final String username = "system";
-	private final String password = "SYSTEM";
+	private final String username = "adminUser";
+	private final String password = "root";
 	private Connection connection;
 
 	private DBConnection() {
