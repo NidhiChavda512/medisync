@@ -38,10 +38,11 @@ public class ViewPatientServlet extends HttpServlet {
 				req.removeAttribute("patientList");
 				req.setAttribute("patientList", patientList);
 				req.setAttribute("SuccessMessage", successMsg);
-				req.getRequestDispatcher("/receptionist/view_patient.jsp").forward(req, res);
+				req.getRequestDispatcher("/receptionist/view-patient.jsp").forward(req, res);
 			} else {
 				HttpSession session = req.getSession(true);
 				session.setAttribute("patientListError", "No Result Found");
+				req.getRequestDispatcher("/receptionist/view-patient.jsp").forward(req, res);
 			}
 		} catch (Exception e) {
 			System.out.print(e);

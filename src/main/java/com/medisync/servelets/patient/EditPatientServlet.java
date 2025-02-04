@@ -28,7 +28,7 @@ public class EditPatientServlet extends HttpServlet {
 			Patient patient = patientDao.findOne(id);
 			if(patient!=null) {
 				req.setAttribute("patientEdit", patient);
-				req.getRequestDispatcher("receptionist/edit-patient.jsp").forward(req, res);
+				req.getRequestDispatcher("/receptionist/edit-patient.jsp").forward(req, res);
 			}
 		} catch (Exception e) {
 			

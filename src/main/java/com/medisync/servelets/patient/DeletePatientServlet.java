@@ -33,7 +33,7 @@ public class DeletePatientServlet extends HttpServlet {
 			} else {
 				HttpSession session=req.getSession(true);
 	            session.setAttribute("errorMessage", "Patient Not Deleted");
-				res.sendRedirect("receptionist/view-patient.jsp");
+				res.sendRedirect(req.getContextPath()+"/receptionist/view-patient.jsp");
 			}
 			
 		} catch (Exception e) {

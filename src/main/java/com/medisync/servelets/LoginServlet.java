@@ -10,7 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.mindrot.jbcrypt.BCrypt;
+
+import com.medisync.dao.DoctorDao;
 import com.medisync.dao.UserDao;
+import com.medisync.models.Doctor;
 import com.medisync.models.User;
 import com.medisync.util.DBConnection;
 
@@ -33,20 +37,26 @@ public class LoginServlet extends HttpServlet {
 			User user = userDao.findOne(username);
 			System.out.print("User : "+user);
 			if (user != null) {
-				if (user.getPassword().equals(password)) {
+				if (BCrypt.checkpw(password, user.getPassword())) {
 					
 					HttpSession session = req.getSession(true);
 					session.setAttribute("username", user.getUserName());
 					session.setAttribute("userid", user.getUserId());
-
+					session.setAttribute("successMessage", "Logged In Successfully");
+					
 					if (user.getRole().equalsIgnoreCase("receptionist")) {
+						session.setAttribute("userrole", "receptionist");
 						res.getWriter().println("receptionist found");
-						req.getRequestDispatcher("receptionist/index.jsp").forward(req, res);
+						req.getRequestDispatcher("/receptionist/receptionist-dashboard.jsp").forward(req, res);
 						
 					} else if (user.getRole().equalsIgnoreCase("doctor")) {
+						Doctor doctor = new DoctorDao(dbConnection).findOne(username);
+						session.setAttribute("userid", doctor.getDoctorId());
+						session.setAttribute("userrole", "doctor");
 						res.getWriter().println("doctor found");
+						req.getRequestDispatcher("/doctor/doctor-dashboard.jsp").forward(req, res);
 					} else {
-						res.getWriter().println("W");
+						res.getWriter().println("No User Found");
 					}
 				} else {
 					req.setAttribute("passwordError", "Invalid Password");

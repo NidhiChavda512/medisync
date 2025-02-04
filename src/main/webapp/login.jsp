@@ -19,8 +19,20 @@
 	bottom: 0;
 	width: 100%;
 	background-color: #f5f5f5;
-	padding: 10px 0;
 	text-align: center;
+}
+ body {
+	background-image: url("<%=request.getContextPath()%>/images/bg-image.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center 40%;;
+	
+}
+
+.button-color {
+	background-color: #0cd268;
+	color: white;
+	margin-bottom:8px;
 }
 </style>
 </head>
@@ -29,7 +41,7 @@
 
 	<div class="container p-5">
 		<div class="row">
-			<div class="col-md-4 offset-md-4">
+			<div class="col-md-4 offset-md-4 mt-5">
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-4 text-center">Login</p>
@@ -58,7 +70,7 @@
 								%>
 							</div>
 
-							<button type="submit" class="btn btn-success text-white col-md-12">Login</button>
+							<button type="submit" class="btn btn-success text-white col-md-12 button-color">Login</button>
 						</form>
 					</div>
 				</div>

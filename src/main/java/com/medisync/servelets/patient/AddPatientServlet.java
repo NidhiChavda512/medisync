@@ -40,7 +40,7 @@ public class AddPatientServlet extends HttpServlet {
     		} else {
     			HttpSession session=req.getSession(true);
 	            session.setAttribute("errorMessage", "Patient Alaready Exists");
-				res.sendRedirect("receptionist/add-patient.jsp");
+				res.sendRedirect(req.getContextPath()+"/receptionist/add-patient.jsp");
     		}		
     	} catch (Exception e) {
     		e.fillInStackTrace();

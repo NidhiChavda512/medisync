@@ -37,12 +37,12 @@ public class PatchPatientServlet extends HttpServlet {
     		System.out.println("Update Operation : "+patientDao.update(id, patient));
     		if(patientDao.update(id, patient)) {
     			System.out.println("In Patch if");
-    			req.setAttribute("registrationSuccess", "Patient Registered Successfully");
-    			res.sendRedirect("view-patient");
+    			req.setAttribute("editSuccess", "Patient Edited Successfully");
+    			req.getRequestDispatcher("view-patient").forward(req, res);
     		} else {
     			HttpSession session=req.getSession(true);
 	            session.setAttribute("errorMessage", "Patient Not Updated");
-				res.sendRedirect("receptionist/edit-patient.jsp");
+				res.sendRedirect(req.getContextPath()+"/receptionist/edit-patient.jsp");
     		}		
     	} catch (Exception e) {
     		e.fillInStackTrace();

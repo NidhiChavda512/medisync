@@ -16,7 +16,7 @@ public class DBConnection {
 	private Connection connection;
 
 	private DBConnection() {
-		super();
+		super(); 
 	}
 
 	public static DBConnection getDbConnection() {

@@ -46,6 +46,30 @@
   	<description></description>
   	<servlet-class>com.medisync.servelets.patient.PatchPatientServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListPatients</servlet-name>
+  	<display-name>ListPatients</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.medicalrecords.ListPatients</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowMedicalRecords</servlet-name>
+  	<display-name>ShowMedicalRecords</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.medicalrecords.ShowMedicalRecords</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchPatientByName</servlet-name>
+  	<display-name>SearchPatientByName</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.medicalrecords.SearchPatientByName</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowMedicalRecordsByDateServlet</servlet-name>
+  	<display-name>ShowMedicalRecordsByDateServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.medisync.servelets.medicalrecords.ShowMedicalRecordsByDateServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
   	<url-pattern>/LoginServlet</url-pattern>
@@ -73,5 +97,21 @@
   <servlet-mapping>
   	<servlet-name>PatchPatientServlet</servlet-name>
   	<url-pattern>/PatchPatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListPatients</servlet-name>
+  	<url-pattern>/ListPatients</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowMedicalRecords</servlet-name>
+  	<url-pattern>/ShowMedicalRecords</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchPatientByName</servlet-name>
+  	<url-pattern>/SearchPatientByName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowMedicalRecordsByDateServlet</servlet-name>
+  	<url-pattern>/ShowMedicalRecordsByDateServlet</url-pattern>
   </servlet-mapping>
 </web-app>

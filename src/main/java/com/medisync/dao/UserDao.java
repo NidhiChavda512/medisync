@@ -46,6 +46,7 @@ public class UserDao implements IDao<User> {
 		if (resultSet.next()) {
 			user = new User(resultSet.getInt("User_Id"), resultSet.getString("UserName"), resultSet.getString("Password"), resultSet.getString("Role"));
 		}
+		resultSet.close();
 		return user;
 	}
 

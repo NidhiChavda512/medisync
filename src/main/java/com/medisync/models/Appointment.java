@@ -33,19 +33,19 @@ public class Appointment {
 		this.appointmentId = appointmentId;
 	}
 
-	public Patient getPatientId() {
+	public Patient getPatient() {
 		return patient;
 	}
 
-	public void setPatientId(Patient patient) {
+	public void setPatient(Patient patient) {
 		this.patient = patient;
 	}
 
-	public Doctor getDoctorId() {
+	public Doctor getDoctor() {
 		return doctor;
 	}
 
-	public void setDoctorId(Doctor doctor) {
+	public void setDoctor(Doctor doctor) {
 		this.doctor = doctor;
 	}
 
@@ -97,7 +97,7 @@ public class Appointment {
 
 	@Override
 	public String toString() {
-		return "Appointment [appointmentId=" + appointmentId + ", patientId=" + patient + ", doctorId=" + doctor
+		return "Appointment [appointmentId=" + appointmentId + ", patient=" + patient + ", doctor=" + doctor
 				+ ", status=" + status + ", appointment_date=" + appointment_date + ", appointment_slot="
 				+ appointment_slot + "]";
 	}
